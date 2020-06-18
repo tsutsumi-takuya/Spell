@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_043644) do
+ActiveRecord::Schema.define(version: 2020_06_18_065252) do
+
+  create_table "spots", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "spot_id"
+    t.string "spot_name"
+    t.text "caption"
+    t.text "address"
+    t.string "spot_image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
