@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
 	root "home#top"
 
+	root "spots#index"
+
 	get "home/about" => "home#about"
 
 	resources :users, only: [:show, :edit, :update]
