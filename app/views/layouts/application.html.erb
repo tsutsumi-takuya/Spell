@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Épeler</title>
+        <title>bnb</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
 
@@ -14,12 +14,20 @@
 
     <header align="left">
         <nav>
-            <ul>
-                <li><%= link_to "Top", root_path %></li>
-                <li><%= link_to "About", home_about_path %></li>
-                <li><%= link_to "Signup", new_user_registration_path %></li>
-                <li><%= link_to "Login",  new_user_session_path %></li>
-            </ul>
+            <% if user_signed_in? %>
+                <ul>
+                    <li><%= link_to "Top", root_path %></li>
+                    <li><%= link_to "About", home_about_path %></li>
+                    <li><%= link_to "Signout", destroy_user_session_path, method: :delete %></li>
+                </ul>
+            <% else %>
+                <ul>
+                    <li><%= link_to "Top", root_path %></li>
+                    <li><%= link_to "About", home_about_path %></li>
+                    <li><%= link_to "Signup", new_user_registration_path %></li>
+                    <li><%= link_to "Login",  new_user_session_path %></li>
+                </ul>
+            <% end %>
         </nav>
     </header><!-- /header -->
 
@@ -28,7 +36,7 @@
     </body>
 
     <footer  align="center">
-        <p>© All rights reserved by Épeler</p>
+        <p>© All rights reserved by me</p>
     </footer>
 
 </html>
