@@ -1,21 +1,21 @@
-<div class="container">
+<div class="container" align="center">
 
-	<h1>Spot new</h1>
+	<h1>New Spot</h1>
 
 	<%= form_for(@spot) do |f| %>
 		<div class="field">
-			<%= f.label "Spots Name" %>
+			<%= f.label "Spot Name" %></br>
 			<%= f.text_field :spot_name %>
 		</div>
 
 		<div class="field">
-			<%= f.label "Caption" %>
+			<%= f.label "Caption" %></br>
 			<%= f.text_field :caption %>
 		</div>
 
 		<div class="photo">
 			<%= f.label "Photo" %>
-			<%= f.attachment_field :spot_image, size:"200×200", fallback: "no_image.jpg" %>
+			<%= f.attachment_field :spot_image, size:"200×200", fallback: "no_image.jpg" %></br>
 		</div>
 
 		<div class="done">
