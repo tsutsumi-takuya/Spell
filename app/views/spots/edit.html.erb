@@ -1,1 +1,25 @@
-<h1>Spot edit</h1>
+<div class="container" align="center">
+
+	<h1>Edit SHOP</h1>
+
+	<%= form_for(@spot) do |f| %>
+		<div class="field">
+		    <%= f.label "Spot Name" %></br>
+		    <%= f.text_field :spot_name %>
+		</div>
+		<div class="field">
+		    <%= f.label "Caption" %></br>
+		    <%= f.text_field :caption %>
+		</div>
+
+		<div class="photo">
+		  	<%= f.label "Photo" %></br>
+			<%= f.attachment_field :spot_image, size:"280x280", fallback: "no_image.jpg" %>
+		</div>
+
+		<div class="done">
+	      	<%= f.submit "Done" %>
+	  	</div>
+	<% end %>
+
+</div>

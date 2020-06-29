@@ -4,7 +4,7 @@
 
 	<% @spots.each do |spot| %>
 		<%= link_to spot_path(spot.id) do %>
-			<%= attachment_image_tag spot, :spot_image, fallback: "no_image.jpg" %>
+			<%= attachment_image_tag spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %>
 		<% end %>
 	<% end %>
 
