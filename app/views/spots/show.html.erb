@@ -6,6 +6,9 @@
 		<p>CHAPTION : <%= @spot.caption %></p>
 	</div>
 
-	<%= link_to "Edit", edit_spot_path %>
+	<% if @spot.user === current_user %>
+		<%= link_to "Edit", edit_spot_path %> /
+		<%= link_to "Delete", spot_path(@spot.id), method: :delete, "data-confirm" => "Are you Sure??" %>
+	<% end %>
 
 </div>
