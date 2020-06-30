@@ -1,9 +1,9 @@
 <div class="container" class="center">
 
 	<div class="tittle">
-		<h3>SPOT : <%= @spot.spot_name %></h3>
+		<h4><strong>SPOT : </strong><%= @spot.spot_name %></h4>
 		<p><%= attachment_image_tag @spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %></p>
-		<p>CHAPTION : <%= @spot.caption %></p>
+		<p><strong>CHAPTION</strong></br><%= @spot.caption %></p>
 	</div>
 
 	<% if @spot.user === current_user %>
