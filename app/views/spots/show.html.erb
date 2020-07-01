@@ -2,6 +2,7 @@
 
 	<div class="tittle">
 		<h4><strong>SPOT : </strong><%= @spot.spot_name %></h4>
+		<h4><strong>User : </strong><%= link_to @spot.user.name %></h4>
 		<p><%= attachment_image_tag @spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %></p>
 		<p><strong>CHAPTION</strong></br><%= @spot.caption %></p>
 	</div>

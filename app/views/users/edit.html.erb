@@ -1,1 +1,16 @@
-<h1>User edit</h1>
+<div class="container" align="center">
+
+	<h1>Edit User</h1>
+
+	<%= form_for(@user) do |f| %>
+		<div class="field">
+		    <%= f.label "Name" %></br>
+		    <%= f.text_field :name %>
+		</div>
+
+		<div class="done">
+	      	<%= f.submit "Done" %>
+	  	</div>
+	<% end %>
+
+</div>
