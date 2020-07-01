@@ -25,6 +25,7 @@
                         <li><%= link_to "About", home_about_path %></li>
                         <li><%= link_to "New Spot", new_spot_path %></li>
                         <li><%= link_to "All spots", spots_path %></li>
+                        <li><%= link_to "My", user_path(current_user.id) %></li>
                         <li><%= link_to "Signout", destroy_user_session_path, method: :delete %></li>
                     </ul>
                 <% else %>
