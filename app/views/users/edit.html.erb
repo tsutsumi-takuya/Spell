@@ -11,10 +11,6 @@
 		    <%= f.label "Introduction" %></br>
 		    <%= f.text_area :introduction %>
 		</div>
-		<div class="photo">
-		  	<%= f.label "Photo" %></br>
-			<%= f.attachment_field :profile_image, size:"280x280", fallback: "no_image.jpg" %>
-		</div>
 		<div class="done">
 	      	<%= f.submit "Done" %>
 	  	</div>
