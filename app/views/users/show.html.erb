@@ -1,1 +1,13 @@
-<h1>User show</h1>
+<div class="container" class="center">
+
+	<div class="user">
+		<h4><strong>User : </strong><%= @user.name %></h4>
+		<p><%= attachment_image_tag @spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %></p>
+		<p><strong>INTRODUCTION</strong></br><%= @user.introduction %></p>
+	</div>
+
+	<% if @user === current_user %>
+		<%= link_to "Edit", edit_user_path %>
+	<% end %>
+
+</div>
