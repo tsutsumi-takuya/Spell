@@ -12,4 +12,11 @@ Rails.application.routes.draw do
 
 	resources :spots
 
+	resources :users do
+		member do
+			get "check"
+			patch "withdraw"
+		end
+	end
+
 end
