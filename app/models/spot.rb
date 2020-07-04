@@ -1,7 +1,5 @@
 class Spot < ApplicationRecord
+  belongs_to :user
 
-	belongs_to :user
-
-	attachment :spot_image, destroy: false
-
+  attachment :spot_image, destroy: false
 end
