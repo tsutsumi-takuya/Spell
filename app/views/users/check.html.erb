@@ -1,1 +1,7 @@
-<h1>check user</h1>
+<div class="container" align="center">
+
+	<h1>check user</h1>
+	<p><%= link_to "My", user_path(current_user.id) %></p>
+	<p><%= link_to "Withdraw", withdrawl_user_path(@user.id), method: :patch %></p>
+
+</div>
