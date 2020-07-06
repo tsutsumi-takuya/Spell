@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def withdrawl
     @user = User.find(current_user.id)
     @user.update(is_active: "Invalid")
-    @user.destory
+    @user.destroy
     reset_session
     redirect_to root_path
   end
