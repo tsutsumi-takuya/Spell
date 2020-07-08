@@ -3,10 +3,11 @@
 	<h1>All spots</h1>
 
 	<div class="hover01 column">
-			<% @spots.each do |spot| %>
+			<% @search_spots.each do |spot| %>
 				<%= link_to spot_path(spot.id) do %>
-				<figure>
-					<%= attachment_image_tag spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %></figure>
+					<figure>
+						<%= attachment_image_tag spot, :spot_image, size:"300x300", fallback: "no_image.jpg" %>
+					</figure>
 				<% end %>
 			<% end %>
 	</div>
