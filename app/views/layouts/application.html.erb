@@ -27,6 +27,14 @@
                         <li><%= link_to "All spots", spots_path %></li>
                         <li><%= link_to "My", user_path(current_user.id) %></li>
                         <li><%= link_to "Signout", destroy_user_session_path, method: :delete %></li>
+                        <li>
+                            <div class="search">
+                                <%= form_tag(spots_path, :method => "get") do %>
+                                <%= text_field_tag :search, params[:search], size:"10×1", :placeholder => "search" %>
+                                <%= submit_tag "search", :spot_name => nil %>
+                                <%end %>
+                            </div>
+                        </li>
                     </ul>
                 <% else %>
                     <ul class="nav navbar-nav navbar-right">
