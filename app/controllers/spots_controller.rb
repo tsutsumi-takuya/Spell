@@ -2,7 +2,7 @@ class SpotsController < ApplicationController
   def index
     @spots = Spot.all
     @user = current_user.id
-    @search_spots = Spot.all.search(params[:seach])
+    @search_spots = Spot.all.search(params[:search])
   end
 
   def show

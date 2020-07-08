@@ -30,8 +30,8 @@
                         <li>
                             <div class="search">
                                 <%= form_tag(spots_path, :method => "get") do %>
-                                <%= text_field_tag :search, params[:search], size:"10×1", :placeholder => "search" %>
-                                <%= submit_tag "search", :spot_name => nil %>
+                                    <%= text_field_tag :search, params[:search], size:"10×1", :placeholder => "search" %>
+                                    <%= submit_tag "search", :spot_name => nil %>
                                 <%end %>
                             </div>
                         </li>
